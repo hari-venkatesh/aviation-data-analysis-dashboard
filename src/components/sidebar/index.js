@@ -17,15 +17,15 @@ const menuItems = [
     icon: <LuLayoutDashboard size={25} />,
   },
   {
-    id: "products",
-    label: "Products",
-    path: "/products",
+    id: "airports",
+    label: "Airports",
+    path: "/airports",
     icon: <TbBrandProducthunt size={25} />,
   },
   {
-    id: "visitors",
-    label: "Visitors",
-    path: "/visitors",
+    id: "airlines",
+    label: "Airlines",
+    path: "/airlines",
     icon: <PiUsersFourLight size={25} />,
   },
 ];
