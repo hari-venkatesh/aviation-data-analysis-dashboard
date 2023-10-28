@@ -11,8 +11,8 @@ const intialFormData = {
   noOfAirlines: 0,
   noOfAircrafts: 0,
   noOfFlightCancelledByAirport: 0,
-  noOfFlightCancelledByAirline: 0,
-  month: 0,
+  noOfFlightCancelledByAirlines: 0,
+  month: "",
 };
 
 export default function AirportLayout({ children }) {

@@ -13,7 +13,7 @@ const initialFormData = {
   aircraftType: "",
   origin: "",
   destination: "",
-  month: 0,
+  month: "",
 };
 
 export default function AirlinesLayout({ children }) {
