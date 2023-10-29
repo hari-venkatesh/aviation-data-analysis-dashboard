@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 
 const initialFormData = {
   name: "",
-  economyClass: 0,
-  businessClass: 0,
+  economyClass: "",
+  businessClass: "",
   aircraftType: "",
   origin: "",
   destination: "",

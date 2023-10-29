@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const VisitorsSchema = new mongoose.Schema(
+const AirlinesSchema = new mongoose.Schema(
   {
     name: String,
     economyClass: Number,

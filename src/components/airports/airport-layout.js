@@ -8,10 +8,10 @@ import { useRouter } from "next/navigation";
 
 const intialFormData = {
   name: "",
-  noOfAirlines: 0,
-  noOfAircrafts: 0,
-  noOfFlightCancelledByAirport: 0,
-  noOfFlightCancelledByAirlines: 0,
+  noOfAirlines: "",
+  noOfAircrafts: "",
+  noOfFlightCancelledByAirport: "",
+  noOfFlightCancelledByAirlines: "",
   month: "",
 };
 
@@ -24,7 +24,7 @@ export default function AirportLayout({ children }) {
   console.log(formData);
 
   async function handleAddAirport() {
-    const res = await fetch("/api/airport/add-airport", {
+    const res = await fetch("/api/airports/add-airport", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export default function AirportLayout({ children }) {
         setShow={setShowModal}
         formData={formData}
         setFormData={setFormData}
-        formControls={airportFormControlsFormControls}
+        formControls={airportFormControls}
         onAdd={handleAddAirport}
       />
     </div>

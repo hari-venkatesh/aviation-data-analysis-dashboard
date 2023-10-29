@@ -1,8 +1,8 @@
-import { monthsMapper, productTableHeaders } from "@/utils/config";
+import { monthsMapper, airportTableHeaders } from "@/utils/config";
 import Table from "../table";
 
 async function extractAllAirports() {
-  const res = await fetch("http://localhost:3000/api/airport/all-airports", {
+  const res = await fetch("http://localhost:3000/api/airports/all-airports", {
     method: "GET",
     cache: "no-store",
   });

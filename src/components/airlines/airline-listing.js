@@ -1,4 +1,4 @@
-import { deviceMapper, monthsMapper, visitorsTableHeaders } from "@/utils/config";
+import { aircraftMapper, monthsMapper, airlinesTableHeaders } from "@/utils/config";
 import Table from "../table";
 
 async function extractAllAirlines() {
@@ -24,7 +24,7 @@ export default async function AirlinesList() {
           ? allAirlines.data.map(item=> ({
             ...item,
             month : monthsMapper[item.month],
-            device : deviceMapper[item.device]
+            aircraftType : aircraftMapper[item.aircraftType]
           }))
           : []
       }
