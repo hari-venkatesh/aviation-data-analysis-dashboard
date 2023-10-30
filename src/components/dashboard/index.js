@@ -4,6 +4,7 @@ import Card from "../card";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import YearlyAnalyticsChart from "../cancellationChart";
+import PassengerAnalytics from "../passengerChart"
 
 export default function DashboardLayout({ allAirlines, allAirports }) {
   console.log(allAirlines, allAirports);
@@ -60,6 +61,9 @@ export default function DashboardLayout({ allAirlines, allAirports }) {
                 }))
               : []
           }
+        />
+        <PassengerAnalytics
+          allAirlines={allAirlines && allAirlines.length ? allAirlines : []}
         />
       </div>
     </div>
