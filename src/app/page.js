@@ -1,4 +1,4 @@
-import DashboardLayout from "@/components/dashboard/page";
+import DashboardLayout from "@/components/dashboard";
 
 //get all airports data
 

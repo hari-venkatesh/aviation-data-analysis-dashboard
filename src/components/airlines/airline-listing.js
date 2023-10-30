@@ -7,7 +7,6 @@ async function extractAllAirlines() {
     cache: "no-store",
   });
   
-
   const data = await res.json();
 
   return data;
