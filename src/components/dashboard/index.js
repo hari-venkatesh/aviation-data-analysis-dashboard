@@ -48,7 +48,7 @@ export default function DashboardLayout({ allAirlines, allAirports }) {
           label={"Total Aircrafts"}
         />
         <Card
-          data={allAirlines && allAirlines.length}
+          data={allAirlines && [...new Set(allAirlines.map((item) => item.name))].length}
           icon={<MdOutlineProductionQuantityLimits size={25} />}
           label={"Total Airlines"}
         />
