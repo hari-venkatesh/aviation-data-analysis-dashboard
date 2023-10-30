@@ -2,10 +2,12 @@
 
 import Card from "../card";
 import { FaUsers } from "react-icons/fa";
-import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { AiOutlineBranches } from "react-icons/ai";
+import { BsAirplaneEngines } from "react-icons/bs";
+import { BsShop } from "react-icons/bs";
 import YearlyAnalyticsChart from "../cancellationChart";
 import PassengerAnalytics from "../passengerChart";
-import AircraftAnalytics from "../aircraftChart"
+import AircraftAnalytics from "../aircraftChart";
 
 export default function DashboardLayout({ allAirlines, allAirports }) {
   console.log(allAirlines, allAirports);
@@ -31,7 +33,7 @@ export default function DashboardLayout({ allAirlines, allAirports }) {
         />
         <Card
           data={allAirports && allAirports.length}
-          icon={<MdOutlineProductionQuantityLimits size={25} />}
+          icon={<AiOutlineBranches size={25} />}
           label={"Total Airports"}
         />
         <Card
@@ -44,12 +46,15 @@ export default function DashboardLayout({ allAirlines, allAirports }) {
                 )
               : 0
           }
-          icon={<MdOutlineProductionQuantityLimits size={25} />}
+          icon={<BsAirplaneEngines size={25} />}
           label={"Total Aircrafts"}
         />
         <Card
-          data={allAirlines && [...new Set(allAirlines.map((item) => item.name))].length}
-          icon={<MdOutlineProductionQuantityLimits size={25} />}
+          data={
+            allAirlines &&
+            [...new Set(allAirlines.map((item) => item.name))].length
+          }
+          icon={<BsShop size={25} />}
           label={"Total Airlines"}
         />
       </div>
