@@ -132,15 +132,10 @@ export const monthsMapper = {
 };
 
 export const aircraftMapper = {
-  airbusA380: "Airbus",
-  airbusA340: "Airbus",
-  airbusA318: "Airbus",
-  boeing767: "Boeing",
-  boeing727: "Boeing",
-  boeing537: "Boeing",
-  douglasDC8: "Douglas",
-  douglasDC3: "Douglas",
-  lockheedL1011TriStar: "Lockheed",
+  airbus: "Airbus",
+  boeing: "Boeing",
+  douglas: "Douglas",
+  lockheed: "Lockheed",
 };
 
 export const airlinesFormControls = [
@@ -187,40 +182,20 @@ export const airlinesFormControls = [
     componentType: "select",
     options: [
       {
-        id: "airbusA380",
-        label: "Airbus A380",
+        id: "airbus",
+        label: "Airbus",
       },
       {
-        id: "airbusA340",
-        label: "Airbus A340",
+        id: "boeing",
+        label: "Boeing",
       },
       {
-        id: "airbusA318",
-        label: "Airbus A318",
+        id: "douglas",
+        label: "Douglas",
       },
       {
-        id: "boeing767",
-        label: "Boeing 767",
-      },      
-      {
-        id: "boeing727",
-        label: "Boeing 727",
-      },
-      {
-        id: "boeing537",
-        label: "Boeing 537",
-      },
-      {
-        id: "douglasDC8",
-        label: "Douglas DC-8",
-      },
-      {
-        id: "douglasDC3",
-        label: "Douglas DC-3",
-      },
-      {
-        id: "lockheedL1011TriStar",
-        label: "Lockheed L-1011 TriStar",
+        id: "lockheed",
+        label: "Lockheed",
       },
     ],
   },
@@ -469,4 +444,46 @@ export const passengerAnalyticsChartOptions = {
   fill: {
     opacity: 1,
   },
+};
+
+export const aircraftAnalyticsChartOptions = {
+  chart: {
+    type: "donut",
+  },
+  colors: ["#10B981", "#375E83", "#259AE6", "#FFA70B"],
+  labels: ["Boeing", "Airbus", "Douglas", "Lockheed"],
+  legend: {
+    show: true,
+    position: "bottom",
+  },
+
+  plotOptions: {
+    pie: {
+      donut: {
+        size: "65%",
+        background: "transparent",
+      },
+    },
+  },
+  dataLabels: {
+    enabled: true,
+  },
+  responsive: [
+    {
+      breakpoint: 2600,
+      options: {
+        chart: {
+          width: 380,
+        },
+      },
+    },
+    {
+      breakpoint: 640,
+      options: {
+        chart: {
+          width: 200,
+        },
+      },
+    },
+  ],
 };
