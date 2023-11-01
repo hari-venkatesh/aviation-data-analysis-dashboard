@@ -22,46 +22,44 @@ export default function Modal({
                   <h3 className="text-3xl font-semibold">{title}</h3>
                 </div>
                 <div className="relative p-5 flex-auto flex flex-col gap-5">
-                  <div key={formControls.name}>
-                    {formControls && formControls.length
-                      ? formControls.map((item) =>
-                          item.componentType === "input" ? (
-                            <Input
-                              type={item.type}
-                              placeholder={item.placeholder}
-                              label={item.label}
-                              value={formData && formData[item.id]}
-                              onChange={(e) =>
-                                setFormData({
-                                  ...formData,
-                                  [item.id]:
-                                    item.type === "number"
-                                      ? parseInt(e.target.value)
-                                      : e.target.value,
-                                })
-                              }
-                            />
-                          ) : item.componentType === "select" ? (
-                            <Select
-                              value={formData && formData[item.id]}
-                              onChange={(e) =>
-                                setFormData({
-                                  ...formData,
-                                  [item.id]: e.target.value,
-                                })
-                              }
-                              label={item.label}
-                              options={item.options}
-                            />
-                          ) : null
-                        )
-                      : null}
-                  </div>
+                  {formControls && formControls.length
+                    ? formControls.map((item) =>
+                        item.componentType === "input" ? (
+                          <Input
+                            type={item.type}
+                            placeholder={item.placeholder}
+                            label={item.label}
+                            value={formData && formData[item.id]}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                [item.id]:
+                                  item.type === "number"
+                                    ? parseInt(e.target.value)
+                                    : e.target.value,
+                              })
+                            }
+                          />
+                        ) : item.componentType === "select" ? (
+                          <Select
+                            value={formData && formData[item.id]}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                [item.id]: e.target.value,
+                              })
+                            }
+                            label={item.label}
+                            options={item.options}
+                          />
+                        ) : null
+                      )
+                    : null}
                 </div>
-                <div className="flex gap-2 items-center justify-end p-6 border-t border-solid rounded-b">
-                  <Button text={"Add"} onClick={onAdd} />
-                  <Button onClick={() => setShow(false)} text={"Close"} />
-                </div>
+              </div>
+              <div className="flex gap-2 items-center justify-end p-6 border-t border-solid rounded-b">
+                <Button text={"Add"} onClick={onAdd} />
+                <Button onClick={() => setShow(false)} text={"Close"} />
               </div>
             </div>
           </div>
