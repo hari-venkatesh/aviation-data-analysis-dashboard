@@ -21,8 +21,8 @@ export default function Modal({
                 <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-slate-200">
                   <h3 className="text-3xl font-semibold">{title}</h3>
                 </div>
-                <div key={formControls.name}>
-                  <div className="relative p-5 flex-auto flex flex-col gap-5">
+                <div className="relative p-5 flex-auto flex flex-col gap-5">
+                  <div key={formControls.name}>
                     {formControls && formControls.length
                       ? formControls.map((item) =>
                           item.componentType === "input" ? (
