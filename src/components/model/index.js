@@ -26,6 +26,7 @@ export default function Modal({
                     ? formControls.map((item) =>
                         item.componentType === "input" ? (
                           <Input
+                            key={item.id}
                             type={item.type}
                             placeholder={item.placeholder}
                             label={item.label}
@@ -42,6 +43,7 @@ export default function Modal({
                           />
                         ) : item.componentType === "select" ? (
                           <Select
+                            key={item.id}
                             value={formData && formData[item.id]}
                             onChange={(e) =>
                               setFormData({
