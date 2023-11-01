@@ -3,7 +3,10 @@ import DashboardLayout from "@/components/dashboard";
 //get all airports data
 
 async function extractAllAirports() {
-  const res = await fetch("http://localhost:3000/api/airports/all-airports", {
+
+  const apiUrl = process.env.API_URL
+  
+  const res = await fetch(`${apiUrl}/api/airports/all-airports`, {
     method: "GET",
     cache: "no-store",
   });
@@ -16,7 +19,10 @@ async function extractAllAirports() {
 //get all airlines data
 
 async function extractAllAirlines() {
-  const res = await fetch("http://localhost:3000/api/airlines/all-airlines", {
+
+  const apiUrl = process.env.API_URL
+
+  const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
     method: "GET",
     cache: "no-store",
   });
@@ -31,9 +37,10 @@ export default async function Home() {
   const allAirlines = await extractAllAirlines();
 
   return (
-    <DashboardLayout
-      allAirports={allAirports && allAirports.data}
-      allAirlines={allAirlines && allAirlines.data}
-    />
+    // <DashboardLayout
+    //   allAirports={allAirports && allAirports.data}
+    //   allAirlines={allAirlines && allAirlines.data}
+    // />
+    <div>Hello</div>
   );
 }

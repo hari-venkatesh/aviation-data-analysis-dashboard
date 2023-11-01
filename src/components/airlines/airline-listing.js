@@ -2,7 +2,8 @@ import { aircraftMapper, monthsMapper, airlinesTableHeaders } from "@/utils/conf
 import Table from "../table";
 
 async function extractAllAirlines() {
-  const res = await fetch("http://localhost:3000/api/airlines/all-airlines", {
+  const apiUrl = process.env.API_URL
+  const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
     method: "GET",
     cache: "no-store",
   });
