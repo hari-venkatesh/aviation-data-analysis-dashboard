@@ -25,7 +25,7 @@ export default function GlobalState({ children }) {
     }
 
     if (status === "authenticated") setLoader(false);
-  }, [status]);
+  }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loader) {
     return (

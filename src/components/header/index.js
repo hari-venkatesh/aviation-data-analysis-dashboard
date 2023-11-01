@@ -15,7 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     if (status === "authenticated") router.push("/");
-  }, [status]);
+  }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow">
