@@ -1,6 +1,6 @@
-import Button from "../FormControls/button";
-import Input from "../FormControls/input";
-import Select from "../FormControls/select";
+import Button from "../formControls/button";
+import Input from "../formControls/input";
+import Select from "../formControls/select";
 
 export default function Modal({
   show,
