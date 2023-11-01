@@ -3,12 +3,15 @@ import User from "@/models/user";
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 
+const gId = process.env.GOOGLE_CLIENT_ID;
+const gSec = process.env.GOOGLE_SECRET
+
 const authOptions = {
   providers: [
     GoogleProvider({
       clientId:
-        "427087621266-5les4aeabmfhm5emtgpofqeej4gjv7vk.apps.googleusercontent.com",
-      clientSecret: "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",
+        gId,
+      clientSecret: gSec,
     }),
   ],
   callbacks: {

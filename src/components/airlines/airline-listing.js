@@ -1,13 +1,17 @@
-import { aircraftMapper, monthsMapper, airlinesTableHeaders } from "@/utils/config";
+import {
+  aircraftMapper,
+  monthsMapper,
+  airlinesTableHeaders,
+} from "@/utils/config";
 import Table from "../table";
 
 async function extractAllAirlines() {
-  const apiUrl = process.env.API_URL
+  const apiUrl = process.env.API_URL;
   const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
     method: "GET",
     cache: "no-store",
   });
-  
+
   const data = await res.json();
 
   return data;
@@ -21,11 +25,11 @@ export default async function AirlinesList() {
       tableHeaderCells={airlinesTableHeaders}
       data={
         allAirlines && allAirlines.data && allAirlines.data.length
-          ? allAirlines.data.map(item=> ({
-            ...item,
-            month : monthsMapper[item.month],
-            aircraftType : aircraftMapper[item.aircraftType]
-          }))
+          ? allAirlines.data.map((item) => ({
+              ...item,
+              month: monthsMapper[item.month],
+              aircraftType: aircraftMapper[item.aircraftType],
+            }))
           : []
       }
     />
