@@ -7,14 +7,14 @@ import Table from "../table";
 
 async function extractAllAirlines() {
   const apiUrl = process.env.API_URL;
-  // const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
-  //   method: "GET",
-  //   cache: "no-store",
-  // });
+  const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
+    method: "GET",
+    cache: "no-store",
+  });
 
-  // const data = await res.json();
+  const data = await res.json();
 
-  // return data;
+  return data;
 }
 
 export default async function AirlinesList() {
