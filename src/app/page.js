@@ -2,39 +2,39 @@ import DashboardLayout from "@/components/dashboard";
 
 //get all airports data
 
-async function extractAllAirports() {
+// async function extractAllAirports() {
 
-  const apiUrl = process.env.API_URL
+//   const apiUrl = process.env.API_URL
   
-  const res = await fetch(`${apiUrl}/api/airports/all-airports`, {
-    method: "GET",
-    cache: "no-store",
-  });
+//   const res = await fetch(`${apiUrl}/api/airports/all-airports`, {
+//     method: "GET",
+//     cache: "no-store",
+//   });
 
-  const data = await res.json();
+//   const data = await res.json();
 
-  return data;
-}
+//   return data;
+// }
 
 //get all airlines data
 
-async function extractAllAirlines() {
+// async function extractAllAirlines() {
 
-  const apiUrl = process.env.API_URL
+//   const apiUrl = process.env.API_URL
 
-  const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
-    method: "GET",
-    cache: "no-store",
-  });
+//   const res = await fetch(`${apiUrl}/api/airlines/all-airlines`, {
+//     method: "GET",
+//     cache: "no-store",
+//   });
 
-  const data = await res.json();
+//   const data = await res.json();
 
-  return data;
-}
+//   return data;
+// }
 
 export default async function Home() {
-  const allAirports = await extractAllAirports();
-  const allAirlines = await extractAllAirlines();
+  // const allAirports = await extractAllAirports();
+  // const allAirlines = await extractAllAirlines();
 
   return (
     // <DashboardLayout
