@@ -37,9 +37,10 @@ export default async function Home() {
   const allAirlines = await extractAllAirlines();
 
   return (
-    <DashboardLayout
-      allAirports={allAirports && allAirports.data}
-      allAirlines={allAirlines && allAirlines.data}
-    />
+    // <DashboardLayout
+    //   allAirports={allAirports && allAirports.data}
+    //   allAirlines={allAirlines && allAirlines.data}
+    // />
+    <div>Home</div>
   );
 }
