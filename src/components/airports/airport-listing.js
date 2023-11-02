@@ -3,14 +3,14 @@ import Table from "../table";
 
 async function extractAllAirports() {
   const apiUrl = process.env.API_URL
-  const res = await fetch(`${apiUrl}/api/airports/all-airports`, {
-    method: "GET",
-    cache: "no-store",
-  });
+  // const res = await fetch(`${apiUrl}/api/airports/all-airports`, {
+  //   method: "GET",
+  //   cache: "no-store",
+  // });
 
-  const data = await res.json();
+  // const data = await res.json();
 
-  return data;
+  // return data;
 }
 
 export default async function AirportListing() {
