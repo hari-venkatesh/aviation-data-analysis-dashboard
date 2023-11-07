@@ -8,7 +8,7 @@ Click
 </a>
 to visit Aviation Dashboard website.<br /><br />
 
-**Technology Stack:**<br /><br />
+**Technology Stack:**<br />
 Database: MongoDB<br />
 Backend: Node.js<br />
 Frontend: NextJS<br />
