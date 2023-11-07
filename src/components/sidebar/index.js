@@ -1,7 +1,7 @@
 "use client";
 
 import { LuLayoutDashboard } from "react-icons/lu";
-import { TbBrandProducthunt } from "react-icons/tb";
+import { AiOutlineBranches } from "react-icons/ai";
 import { PiUsersFourLight } from "react-icons/pi";
 import { useContext } from "react";
 import { GlobalContext } from "@/context";
@@ -20,7 +20,7 @@ const menuItems = [
     id: "airports",
     label: "Airports",
     path: "/airports",
-    icon: <TbBrandProducthunt size={25} />,
+    icon: <AiOutlineBranches size={25} />,
   },
   {
     id: "airlines",

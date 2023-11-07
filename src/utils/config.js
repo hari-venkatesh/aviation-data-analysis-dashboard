@@ -171,7 +171,7 @@ export const airlinesFormControls = [
     id: "destination",
     type: "text",
     placeholder: "Enter Airport Name",
-    label: "Arraival",
+    label: "Arrival",
     componentType: "input",
   },
   {
@@ -386,7 +386,7 @@ export const yearlyAnalyticsChartOptions = {
       },
     },
     min: 0,
-    max: 100,
+    max: 105,
   },
 };
 
